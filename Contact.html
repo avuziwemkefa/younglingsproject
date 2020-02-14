@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Contact</title>
+        <!--Linking firebase app-->
+        <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+        <!--Linking drop html file to Style css file-->
+        <link rel="stylesheet" href="contacts.css">
+        <!--link to add icons-->
+        <link rel="stylesheet" href= "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <!--link for google recaptcha to the server-->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+         <!--Linking drop html file to Contact php file-->
+         <link rel="stylesheet" href="Contact.php">
+    </head>
+    <body>
+        <header class="header">
+            <!--anchor Log tag on the left side-->
+           <a class="logo">Avuziwe Mkefa</a> 
+           <!--Input for regular check box and enables to click on/off-->
+           <input class="menu-btn" type="checkbox" id="menu-btn">
+           <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+            <!--Menu unordered list-->
+           <ul class="menu">
+               <!--Actual listed items for the menu bar-->
+                <li class="home"><a href="Home.html"><i class="fa fa-home"></i>Home</a></li>
+                <li class="AboutMe"><a href="About.html"><i class="fa fa-user"></i>About</a>    </li>
+                <li class="PortFolio"><a href="Portfolio.html"><i class="fa fa-pencil-square-o"></i>Portfolio</a></li>
+                <li class="active"><a href="Contact.html"><i class="fa fa-phone"></i>Contact</a></li>
+            </ul>
+        </header>
+        
+        <!--Contact form-->
+        <div class="form">
+        <div class="container">
+            <h1 class="brand">Contact Form</h1>
+            <div class="wrapper animated bounceInLeft">
+                <div class="About-Me">
+                    <h3>Avuziwe Mkefa</h3>
+                    <ul>
+                        <li><i class="fa fa-road"></i> 1124 Sonwabile Street</li>
+                        <li><i class="fa fa-phone"></i> 067 6171 056</li>
+                    </ul>
+                </div>
+                <div class="contact">
+                    <h3>Email Me</h3>
+                    
+                    <form id="contactForm">
+                        <p>
+                            <label>Name</label>
+                            <input type="text" name="name" id="name" required>
+                        </p>
+                        <p>
+                            <label>Subject</label>
+                            <input type="text" name="subject" id="subject" required>
+                        </p>
+                        <p>
+                            <label>Email Address</label>
+                            <input type="text" name="email" id="email"required>
+                        </p>
+                        <p>
+                            <label>Phone Number</label>
+                            <input type="text" name="phone"id="phone"required>
+                        </p>
+                        <p class="full">
+                            <label>Message</label>
+                            <textarea name="message" rows="5"  id="message" required> </textarea>
+                        </p>
+                        <!--Robot-->
+                        <div class="Robot">
+                        <div class="g-recaptcha" data-sitekey="6LdU6NgUAAAAAM3TaiaAOzThMcNvqUtyic_klhZN"></div> 
+                        </div>
+                        <p class="full">
+                            <button> Submit</button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>      
+    <footer style="background-color:yellowgreen;">
+        <div class="icons">
+          <div><a href="https://www.facebook.com" target="_blank"><img src="facebook.png"width="50px"height="50px"></a></div>
+          <div><a href="https://twitter.com/search?" target="_blank"><img src="twitter.png"width="50px"height="50px"></a></div>
+          <div><a href="https://www.linkedin.com" target="_blank"><img src="LinkedIn.png"width="50px"height="50px"></a></div>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script src="main.js"></script>
+<html>
