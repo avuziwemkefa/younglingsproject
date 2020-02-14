@@ -1,0 +1,282 @@
+/*About Me*/
+body{
+    margin: 0;
+    font-family: sans-serif;
+
+  }
+
+a{
+    color: black;
+}
+
+.header{
+    background-color: yellowgreen;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+.logo {
+    font-size: 3rem;
+}
+
+.header ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color:white;
+}
+
+.header ul a{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.header ul a:hover{
+    background-color: gray;
+    border-radius: 3px;
+
+}
+
+ .active, menu ul li:hover{
+    background-color: aqua;
+  }
+
+.header .log{
+    float: left;
+    display: block;
+    font-size: 2em;
+    padding: 10px 20px;
+}
+
+.header .menu{
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+/*Spacing added icons from navigation texts*/
+.menu li a .fa{
+    margin-right: 8px;
+}
+
+.header .menu-icon{
+    padding: 28px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+.header .menu-icon .nav-icon{
+    background:darkgray;
+    display: block;
+    height: 2px;
+    width: 10px;
+    position: relative;
+    transition: backgroud 0.2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before{
+    background: black;
+    content:"";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: backgroud 0.2s ease-out;
+    top: 5px;
+}
+
+.header .menu-icon .nav-icon:after{
+    background: black;
+    content:"";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: 0.2s ease-out;
+    top: -5px;
+}
+
+.header .menu-btn{
+    display: none;
+}
+
+.header .menu-btn:checked ~.menu{
+    max-height: 240px;
+}
+
+.header .menu-btn:checked ~.menu-icon .nav-icon{
+    background: transparent;
+
+}
+
+.header .menu-btn:checked ~.menu-icon .nav-icon:before{
+    transform: rotate(-45deg);
+    top:0;
+    
+}
+
+.header .menu-btn:checked ~.menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+    top:0;
+}
+
+@media (min-width: 48em){
+    .header li{
+        float: left;
+    }
+    .header li a{
+        padding: 20px 30px;
+    }
+    .header .menu{
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .header .menu-icon{
+        display: none;
+    }
+}
+
+    .header ul ul{
+        display: none;
+        position: absolute;
+        top: 60;
+    }
+
+    .header ul ul li{
+        width: 200px;
+        float: none;
+        display: list-item;
+        position: relative;
+    }
+    .header ul li:hover>ul{
+        display: inherit;
+    }
+
+    
+    /* FOOTER */  
+  footer{
+    padding-top: 30px;
+  }
+  
+  .icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .icons img{
+    margin: 15px;
+  }
+
+/*form*/
+
+   .form{
+    background-image: url('cloud.jpg');
+    color: lightslategray;
+    line-height: 1.6;
+    font-family: sans-serif;
+    padding: 1em;
+    box-sizing: border-box;
+    }
+    .container{
+        max-width:1170px;
+        margin-left:auto;
+        margin-right:auto;
+        padding:1em;
+    }
+    /*Removing bullet points*/
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+    
+    .brand{
+        text-align: center;
+    }
+    /*border-box around contact form */
+    .wrapper{
+        box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+    }
+    /*All direct elememts inside wrapper having padding*/
+    .wrapper > *{
+        padding: 1em;
+    }
+    /*Section about my details*/
+    .About-Me{
+        background: lightblue;
+    }
+    /*Styling my details section*/
+    .About-Me h3, .About-Me ul{
+        text-align: center;
+        margin:0 0 1em 0;
+    }
+    /*Users section*/
+    .contact{
+        background: white;
+    }
+    
+    /*Form Style*grid-gap: 20px;/
+    /*focusing on the form elements*/
+    .contact form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    }
+    
+    .contact form label{
+        display:block;
+    }
+    /*Closing gap between texts and inputs*/
+    .contact form p{
+        margin:0;
+    }
+    /*Stretching textarea and submit button*/
+    .contact form .full{
+        grid-column: 1/3;
+    
+    }
+    /*Making stretching visible by setting width*/
+    .contact form button, .contact form textarea{
+        width: 90%;
+        padding: 1em;
+        border: 1px solid lightblue;
+    }
+    /*focusing on button*/
+    .contact form button{
+        background: lightblue;
+        border: 0;
+        text-transform: uppercase;
+    }
+    /*Button color*/
+    .contact form button:hover, .contact form button:focus{
+        background: green;
+        color: white;
+        outline: 0;
+        transition: 2s ease-out;
+    }
+    
+    /*Large screens*/
+    @media(min-width:700px){
+        .wrapper{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    
+        .wrapper > *{
+            padding: 2em;
+        }
+    
+        .About-Me h3, .About-Me ul, .brand{
+            text-align: left;
+        }
+    }
+
+    .alert{
+        background-color: tan;
+        background-size: cover;
+        background-position: center;
+    }
